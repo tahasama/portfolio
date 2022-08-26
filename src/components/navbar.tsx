@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import icon from "../images/favicon.png";
 
@@ -17,9 +17,28 @@ const links = [
 
 const Navbar: FC = () => {
   const [nav, setNav] = useState<boolean>(false);
+  const [scrolling, setScrolling] = useState(0);
+
+  useEffect(() => {
+    scrolled();
+    // adding the event when scroll change Logo
+    window.addEventListener("scroll", scrolled);
+  }, []);
+
+  const scrolled = () => {
+    setScrolling(window.scrollY);
+  };
+
   return (
-    <div className="flex justify-between items-center w-full h-20 text-white fixed bg-black px-4">
+    <div
+      className={`flex justify-between items-center w-full h-20 text-white fixed px-4 ${
+        scrolling <= 450
+          ? "bg-black"
+          : "bg-radient-gray-800 via-black duration-300"
+      }`}
+    >
       <img className="w-16 ml-2" src={icon} alt="" />
+
       <ul className="hidden sm:flex">
         {links.map((l: linksProps) => (
           <li

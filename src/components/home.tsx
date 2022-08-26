@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import photo from "../images/photo.jpg";
 
 import { HiArrowNarrowRight } from "react-icons/hi";
@@ -30,7 +29,7 @@ const Home = () => {
         <img
           src={photo}
           alt=""
-          className="rounded-2xl mx-6 lg:my-28  w-11/12 "
+          className="rounded-2xl mx-6 lg:mt-36  w-11/12 "
         />
       </div>
     </div>
