@@ -47,8 +47,8 @@ const Portfolio = () => {
               >
                 <img className=" w-full h-full" src={c.image} alt="wow" />
               </div>
-              <div className="h-20 w-full relative mt-[-112px] opacity-70 bg-slate-700 z-10 "></div>
-              <div className="flex justify-center relative items-center mt-[-50px] h-full opacity-1 font-serif font-bold text-xl text-lime-300 z-30 my-10">
+              <div className="h-20 w-full relative mt-[-112px] opacity-70 bg-slate-700"></div>
+              <div className="flex justify-center relative items-center mt-[-50px] h-full opacity-1 font-serif font-bold text-xl text-lime-300 my-10">
                 <p className="">{c.category}</p>
               </div>
             </div>

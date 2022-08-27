@@ -67,7 +67,7 @@ const links: linksProps[] = [
 
 const social: FC = () => {
   return (
-    <div className="flex flex-col top-1/3 left-0 fixed text-white z-20">
+    <div className="flex flex-col top-1/3 left-0 fixed text-white z-50">
       <ul className="rounded">
         {links.map((l: linksProps) => (
           <li

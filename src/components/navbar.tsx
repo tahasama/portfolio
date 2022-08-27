@@ -31,7 +31,7 @@ const Navbar: FC = () => {
 
   return (
     <div
-      className={`flex justify-between items-center w-full z-20 h-20 text-white fixed px-4 ${
+      className={`flex justify-between items-center w-full z-30 h-20 text-white fixed px-4 ${
         scrolling <= 470
           ? "bg-black"
           : scrolling >= 470 && scrolling <= 1080
@@ -55,7 +55,7 @@ const Navbar: FC = () => {
       </ul>
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer mr-4 z-10 text-violet-400 sm:hidden"
+        className="cursor-pointer mr-4 text-violet-400 sm:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
