@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Weddings from "../images/wedding.jpeg";
@@ -83,10 +82,14 @@ const Category = () => {
           </p>
           <div className="columns-2 md:columns-3 lg:columns-4 h-full">
             {Categories.map((c: categoriesProps) => (
-              <div key={c.id} className="cursor-pointer">
+              <div key={c.id} className="cursor-pointer ">
                 <a href={c.image}>
-                  <div className="mb-8 z-20">
-                    <img className="w-full h-full" src={c.image} alt="wow" />
+                  <div className="mb-4 z-20 ">
+                    <img
+                      className="w-full h-full hover:scale-105 duration-500"
+                      src={c.image}
+                      alt="wow"
+                    />
                   </div>
                 </a>
               </div>

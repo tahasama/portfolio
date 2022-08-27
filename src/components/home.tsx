@@ -16,10 +16,10 @@ const Home = () => {
             for many year to come.
           </h2>
           <div className="">
-            <button className=" group font-semibold rounded-md px-4 py-2 my-5 flex items-center border-gradient bg-gradient-to-r from-cyan-500 to-blue-500 ">
+            <button className=" group font-semibold text-xl rounded-md px-4 py-2 my-7 flex items-center border-gradient bg-gradient-to-r from-cyan-500 to-blue-500 ">
               Portfolio
-              <span className="group-hover:rotate-90 duration-300 m-2">
-                <HiArrowNarrowRight size={18} />
+              <span className="group-hover:rotate-90 duration-500 m-2">
+                <HiArrowNarrowRight size={22} />
               </span>
             </button>
           </div>
