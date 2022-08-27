@@ -1,5 +1,3 @@
-import React from "react";
-
 const About = () => {
   return (
     <div className="w-full h-screen bg-gradient-to-b from-gray-800 via-sky-900 to-sky-700 ">

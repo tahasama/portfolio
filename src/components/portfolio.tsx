@@ -5,7 +5,6 @@ import Industrial from "../images/industrial.jpg";
 import Fashion from "../images/fashion.jpg";
 import Architectural from "../images/architectural.jpg";
 import Music from "../images/music.jpg";
-import photo from "../images/photo.jpg";
 import { useNavigate } from "react-router-dom";
 
 interface categoriesProps {
@@ -40,29 +39,22 @@ const Portfolio = () => {
         </div>
         <div className="columns-2 md:columns-3 lg:columns-3 h-full ">
           {Categories.map((c: categoriesProps) => (
-            <div key={c.id} className="cursor-pointer">
+            <div key={c.id} className="cursor-pointer group hover:mb-40">
               <div
                 className="mb-8 z-20 "
                 onClick={() => navigate(`/${c.category}`)}
               >
                 <img className=" w-full h-full" src={c.image} alt="wow" />
               </div>
-              <div className="h-20 w-full relative mt-[-112px] opacity-70 bg-slate-700"></div>
-              <div className="flex justify-center relative items-center mt-[-50px] h-full opacity-1 font-serif font-bold text-xl text-lime-300 my-10">
-                <p className="">{c.category}</p>
+              <div className="h-20 w-full relative mt-[-112px] opacity-70 bg-slate-700 group-hover:h-[260px] group-hover:mt-[-292px] duration-500"></div>
+              <div className="flex justify-center relative items-center  mt-[-50px] h-full opacity-1 font-serif font-medium text-2xl text-lime-300 my-10 tracking-wide">
+                <p className="group-hover:tracking-widest m-[-1px] p-0 group-hover:mt-[-192px] duration-500">
+                  {c.category}
+                </p>
               </div>
             </div>
           ))}
         </div>
-        {/* <div className="columns-2 md:columns-3 lg:columns-4">
-          <img className="mb-4" src="https://source.unsplash.com/random/1" />
-          <img className="mb-4" src="https://source.unsplash.com/random/2" />
-          <img className="mb-4" src="https://source.unsplash.com/random/3" />
-          <img className="mb-4" src="https://source.unsplash.com/random/4" />
-          <img className="mb-4" src="https://source.unsplash.com/random/5" />
-          <img className="mb-4" src="https://source.unsplash.com/random/6" />
-          <img className="mb-4" src="https://source.unsplash.com/random/7" />
-        </div> */}
       </div>
     </div>
   );
