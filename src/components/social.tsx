@@ -10,7 +10,7 @@ interface linksProps {
   href: string;
 }
 
-const links = [
+const links: linksProps[] = [
   {
     id: 1,
     link: (
@@ -67,7 +67,7 @@ const links = [
 
 const social: FC = () => {
   return (
-    <div className="flex flex-col top-1/3 left-0 fixed text-white ">
+    <div className="flex flex-col top-1/3 left-0 fixed text-white z-20">
       <ul className="rounded">
         {links.map((l: linksProps) => (
           <li

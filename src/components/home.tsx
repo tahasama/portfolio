@@ -15,8 +15,8 @@ const Home = () => {
             and modern fashion. He creates art that will be tasteful and elegant
             for many year to come.
           </h2>
-          <div className=" ">
-            <button className=" group  rounded-md px-4 py-2 my-5 flex items-center border-gradient bg-gradient-to-r from-cyan-500 to-blue-500 ">
+          <div className="">
+            <button className=" group font-semibold rounded-md px-4 py-2 my-5 flex items-center border-gradient bg-gradient-to-r from-cyan-500 to-blue-500 ">
               Portfolio
               <span className="group-hover:rotate-90 duration-300 m-2">
                 <HiArrowNarrowRight size={18} />
