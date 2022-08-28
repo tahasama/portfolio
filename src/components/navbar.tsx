@@ -33,7 +33,7 @@ const Navbar: FC = () => {
 
   return (
     <div
-      className={`flex overflow-visible justify-between items-center w-screen h-20 z-50 text-white fixed px-4 ${
+      className={`flex  justify-between items-center w-screen h-20 z-50 text-white fixed px-4 ${
         params.category === undefined
           ? scrolling <= 464
             ? "bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900"
