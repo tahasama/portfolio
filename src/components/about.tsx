@@ -16,7 +16,7 @@ const About = () => {
             {/* <Background>
               <img src={Camera} alt="camera" className="w-[10000px] p-32" />
             </Background> */}
-            <div className=" h-[500px]  w-screen text-white">
+            <div className=" h-[520px]  w-screen text-white">
               <p className="absolute top-[40%] right-[20%]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur, voluptas assumenda laboriosam, aperiam aliquid
