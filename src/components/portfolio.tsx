@@ -39,11 +39,11 @@ const Portfolio = () => {
               key={c.id}
               className=" cursor-pointer group mb-5 origin-top hover:scale-95 duration-1000 "
             >
-              <div className=" " onClick={() => navigate(`/${c.category}`)}>
+              <div className="z-10" onClick={() => navigate(`/${c.category}`)}>
                 <img className=" w-full h-full" src={c.image} alt="wow" />
               </div>
-              <div className="relative">
-                <div className=" mt-[-95px] opacity-50 bg-sky-800 group-hover:bg-transparent h-24 duration-1000 "></div>
+              <div className="relative  mt-[-95px]">
+                <div className=" opacity-50 bg-sky-800 group-hover:bg-transparent h-24 duration-1000 "></div>
                 <div className=" mt-[-95px] opacity-0 h-24 group-hover:opacity-100 group-hover:bg-gradient-to-r from-sky-900 via-sky-800 to-cyan-900 duration-1000 "></div>
                 <div className="mt-[-90px] flex flex-col justify-center relative items-center h-full font-serif font-medium text-2xl text-lime-200 my-10 tracking-wide">
                   <p className=" w-full flex justify-center items-center group-hover:tracking-widest m-[-1px] p-0  duration-700 ">
