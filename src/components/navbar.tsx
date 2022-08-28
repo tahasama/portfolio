@@ -23,12 +23,12 @@ const Navbar: FC = () => {
 
   useEffect(() => {
     scrolled();
-    // adding the event when scroll change Logo
     window.addEventListener("scroll", scrolled);
   }, []);
 
   const scrolled = () => {
     setScrolling(window.scrollY);
+    // console.log(window.scrollY);
   };
 
   return (
@@ -37,9 +37,13 @@ const Navbar: FC = () => {
         params.category === undefined
           ? scrolling <= 470
             ? "bg-black"
-            : scrolling >= 470 && scrolling <= 1080
+            : scrolling >= 470 && scrolling <= 775
             ? "bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800 duration-500"
-            : " bg-gradient-to-b from-sky-800 via-sky-700 to-sky-700"
+            : scrolling >= 775 && scrolling <= 1140
+            ? " bg-gradient-to-b from-gray-700  via-sky-900 to-sky-900 duration-500"
+            : scrolling >= 1140 && scrolling <= 2050
+            ? " bg-gradient-to-b from-sky-900 via-sky-800 to-sky-700"
+            : "bg-black"
           : "bg-purple-800"
       }`}
     >

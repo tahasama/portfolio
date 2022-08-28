@@ -37,14 +37,15 @@ const Portfolio = () => {
           {Categories.map((c: categoriesProps) => (
             <div
               key={c.id}
-              className=" cursor-pointer group mb-5 origin-top hover:rotate-1 duration-1000 "
+              className=" cursor-pointer group mb-5 origin-top hover:scale-95 duration-1000 "
             >
               <div className=" " onClick={() => navigate(`/${c.category}`)}>
                 <img className=" w-full h-full" src={c.image} alt="wow" />
               </div>
               <div className="relative">
-                <div className=" mt-[-160px] opacity-70 bg-slate-700 h-40 "></div>
-                <div className="mt-[-90px] flex flex-col justify-center relative items-center  h-full opacity-1 font-serif font-medium text-2xl text-lime-300 my-10 tracking-wide">
+                <div className=" mt-[-95px] opacity-60 bg-sky-700 group-hover:bg-transparent h-24 duration-1000 "></div>
+                <div className=" mt-[-95px] opacity-0 h-24 group-hover:opacity-100 group-hover:bg-gradient-to-r from-sky-900 via-sky-800 to-cyan-900 duration-1000 "></div>
+                <div className="mt-[-90px] flex flex-col justify-center relative items-center h-full font-serif font-medium text-2xl text-lime-300 my-10 tracking-wide">
                   <p className=" w-full flex justify-center items-center group-hover:tracking-widest m-[-1px] p-0  duration-700 ">
                     {c.category}
                   </p>
@@ -55,18 +56,6 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="bottom-[170px]  md:bottom-[260px] flex flex-col justify-center relative items-center  mt-[-50px] h-full opacity-1 font-serif font-medium text-2xl text-lime-300 my-10 tracking-wide">
-                <p className="group-hover:tracking-widest m-[-1px] p-0  duration-700 ">
-                  {c.category}
-                </p>
-                <br />
-                <div className=" flex flex-row justify-center items-center opacity-0 group-hover:opacity-100 mt-[-30px] duration-1000">
-                  <p> go to gallery </p>
-                  <div className="mx-4 ">
-                    <ImArrowRight />
-                  </div>
-                </div>
-              </div> */}
               </div>
             </div>
           ))}
