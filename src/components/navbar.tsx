@@ -17,7 +17,7 @@ const links: linksProps[] = [
 ];
 
 const Navbar: FC = () => {
-  const [nav, setNav] = useState<boolean>(false);
+  const [nav, setNav] = useState<boolean>(true);
   const params = useParams();
   const [scrolling, setScrolling] = useState(0);
 
@@ -53,7 +53,7 @@ const Navbar: FC = () => {
         {links.map((l: linksProps) => (
           <li
             key={l.id}
-            className={`capitalize font-medium px-4 cursor-pointer  hover:scale-105 duration-100 ${
+            className={`capitalize font-medium px-4 cursor-pointer text-xl hover:scale-105 duration-100 ${
               params.category === undefined && scrolling <= 470
                 ? "text-gray-500"
                 : "text-gray-300"
@@ -65,7 +65,7 @@ const Navbar: FC = () => {
       </ul>
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer mr-4 text-violet-400 sm:hidden"
+        className="cursor-pointer mr-4 text-violet-400 z-50 sm:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
