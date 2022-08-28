@@ -57,7 +57,7 @@ const Navbar: FC = () => {
         {links.map((l: linksProps) => (
           <li
             key={l.id}
-            className={`capitalize h-full font-medium px-4 cursor-pointer text-xl hover:scale-105 duration-100 ${
+            className={`capitalize h-full font-medium px-4 cursor-pointer text-lg hover:scale-105 duration-100 ${
               params.category === undefined && scrolling <= 470
                 ? "text-gray-500"
                 : "text-gray-300"
