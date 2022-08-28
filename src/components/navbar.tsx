@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { Params, useParams } from "react-router-dom";
 import icon from "../images/favicon.png";
 
 interface linksProps {
@@ -17,9 +17,9 @@ const links: linksProps[] = [
 ];
 
 const Navbar: FC = () => {
-  const [nav, setNav] = useState<boolean>(true);
-  const params = useParams();
-  const [scrolling, setScrolling] = useState(0);
+  const [nav, setNav] = useState<boolean>(false);
+  const params = useParams<Params<string>>();
+  const [scrolling, setScrolling] = useState<number>(0);
 
   useEffect(() => {
     scrolled();
@@ -33,18 +33,22 @@ const Navbar: FC = () => {
 
   return (
     <div
-      className={`flex justify-between items-center w-full z-30 h-20 text-white fixed px-4 ${
+      className={`flex justify-between items-center w-screen z-30 h-20 text-white fixed px-4 ${
         params.category === undefined
-          ? scrolling <= 470
+          ? scrolling <= 670
             ? "bg-black"
-            : scrolling >= 470 && scrolling <= 775
+            : scrolling >= 670 && scrolling <= 1975
             ? "bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800 duration-500"
-            : scrolling >= 775 && scrolling <= 1140
+            : scrolling >= 1975 && scrolling <= 2140
             ? " bg-gradient-to-b from-gray-700  via-sky-900 to-sky-900 duration-500"
             : scrolling >= 1140 && scrolling <= 2050
             ? " bg-gradient-to-b from-sky-900 via-sky-800 to-sky-700"
             : "bg-black"
-          : "bg-purple-800"
+          : scrolling <= 3000
+          ? "bg-gradient-to-b from-purple-900 via-purple-800 to-purple-800"
+          : scrolling >= 3000 && scrolling <= 4800
+          ? "bg-gradient-to-b from-fuchsia-900 via-fuchsia-800 to-fuchsia-700 "
+          : "bg-gradient-to-b from-fuchsia-800 via-fuchsia-700 to-fuchsia-600 "
       }`}
     >
       <img className="w-16 ml-2" src={icon} alt="" />

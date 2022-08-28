@@ -6,7 +6,7 @@ import Social from "./components/social";
 
 function App() {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <Home />
       <Social />

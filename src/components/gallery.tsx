@@ -20,11 +20,14 @@ interface videosProps {
 }
 
 const galleries: galleriesProps[] = [
-  { id: 1, gallery: "Weddings", image: Weddings },
-  { id: 2, gallery: "Events", image: Events },
-  { id: 3, gallery: "Industrial", image: Industrial },
-  { id: 4, gallery: "Fashion", image: Fashion },
-  { id: 6, gallery: "Portrait", image: Portrait },
+  { id: 30, gallery: "Portrait", image: Portrait },
+  { id: 31, gallery: "Architectural", image: Architectural },
+  { id: 32, gallery: "Weddings", image: Weddings },
+  { id: 33, gallery: "Events", image: Events },
+  { id: 34, gallery: "Industrial", image: Industrial },
+  { id: 35, gallery: "Fashion", image: Fashion },
+  { id: 36, gallery: "Portrait", image: Portrait },
+  { id: 37, gallery: "Architectural", image: Architectural },
   { id: 7, gallery: "Architectural", image: Architectural },
   { id: 8, gallery: "Weddings", image: Weddings },
   { id: 9, gallery: "Events", image: Events },
@@ -36,26 +39,23 @@ const galleries: galleriesProps[] = [
   { id: 15, gallery: "Events", image: Events },
   { id: 16, gallery: "Industrial", image: Industrial },
   { id: 17, gallery: "Fashion", image: Fashion },
-  { id: 18, gallery: "Portrait", image: Portrait },
-  { id: 19, gallery: "Architectural", image: Architectural },
-  { id: 20, gallery: "Weddings", image: Weddings },
-  { id: 21, gallery: "Events", image: Events },
-  { id: 22, gallery: "Industrial", image: Industrial },
-  { id: 23, gallery: "Fashion", image: Fashion },
-  { id: 24, gallery: "Portrait", image: Portrait },
+  { id: 1, gallery: "Weddings", image: Weddings },
+  { id: 2, gallery: "Events", image: Events },
+  { id: 3, gallery: "Industrial", image: Industrial },
+  { id: 4, gallery: "Fashion", image: Fashion },
+  { id: 6, gallery: "Portrait", image: Portrait },
   { id: 25, gallery: "Architectural", image: Architectural },
   { id: 26, gallery: "Weddings", image: Weddings },
   { id: 27, gallery: "Events", image: Events },
   { id: 28, gallery: "Industrial", image: Industrial },
   { id: 29, gallery: "Fashion", image: Fashion },
-  { id: 30, gallery: "Portrait", image: Portrait },
-  { id: 31, gallery: "Architectural", image: Architectural },
-  { id: 32, gallery: "Weddings", image: Weddings },
-  { id: 33, gallery: "Events", image: Events },
-  { id: 34, gallery: "Industrial", image: Industrial },
-  { id: 35, gallery: "Fashion", image: Fashion },
-  { id: 36, gallery: "Portrait", image: Portrait },
-  { id: 37, gallery: "Architectural", image: Architectural },
+  { id: 18, gallery: "Portrait", image: Portrait },
+  { id: 19, gallery: "Architectural", image: Architectural },
+  { id: 20, gallery: "Weddings", image: Weddings },
+  { id: 21, gallery: "Events", image: Events },
+  { id: 23, gallery: "Fashion", image: Fashion },
+  { id: 22, gallery: "Industrial", image: Industrial },
+  { id: 24, gallery: "Portrait", image: Portrait },
 ];
 
 const videos: videosProps[] = [
@@ -112,7 +112,7 @@ const Gallery = () => {
             Welecome to the {params.category} Gallery, here you can browse our
             finest collection,
           </p>
-          <div className="columns-1 md:columns-2 lg:columns-3  h-full">
+          <div className="columns-1 md:columns-2 lg:columns-3 h-full">
             {params.category !== "Music Videos"
               ? galleries.map((c: galleriesProps) => (
                   <div key={c.id} className="cursor-pointer ">

@@ -30,7 +30,7 @@ const Portfolio = () => {
     <div className="w-full h-full bg-gradient-to-b from-sky-700 via-sky-600 to-blue-400 ">
       <div className="pt-[100px] sm:pt[0%] sm:pt-[200px]">
         <p className="p-8 text-3xl  indent-7 font-semibold font-serif text-slate-300">
-          Portfolio Wall
+          Portfolio
         </p>
 
         <div className="columns-2 md:columns-3 lg:columns-3 mx-3 ">
