@@ -4,7 +4,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 
 const Home = () => {
   return (
-    <div className="h-full w-full bg-gradient-to-b from-black via-black to-gray-800 flex flex-col lg:flex-row lg:h-screen">
+    <div className="h-full w-full bg-gradient-to-b from-gray-900 via-gray-900 to-black flex flex-col lg:flex-row lg:h-screen">
       <div className=" mt-0 ml-20 flex flex-col items-center justify-center h-full px-5 w-10/12 lg:w-6/12">
         <div>
           <h2 className="text-slate-300 text-xl from-neutral-400 indent-7 leading-8 mt-28 sm:mt-28 lg:mt-12 xl:mt-5 sm:py-0">

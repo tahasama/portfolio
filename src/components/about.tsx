@@ -5,7 +5,7 @@ import { Parallax } from "react-parallax";
 
 const About = () => {
   return (
-    <div className="w-full h-full bg-black">
+    <div className="z-0 h-full bg-black">
       <div className="flex flex-col justify-center pl-16 ">
         {/* <div style={{ backgroundImage: `url(${Events})` }} > */}
         <p className="my-7 text-3xl font-semibold font-serif text-slate-300">
@@ -25,7 +25,7 @@ const About = () => {
               </p>
             </div>
           </Parallax>
-
+          {/* <br /> */}
           <Parallax strength={300} bgImage={Drone}>
             {/* <Background>
               <img src={Camera} alt="camera" className="w-[10000px] p-32" />
@@ -39,7 +39,7 @@ const About = () => {
               </p>
             </div>
           </Parallax>
-
+          <br />
           <Parallax strength={-300} bgImage={Camera} className="p-0 m-0">
             {/* <Background>
               <img src={Camera} alt="camera" className="w-[10000px] p-32" />

@@ -28,21 +28,21 @@ const Navbar: FC = () => {
 
   const scrolled = () => {
     setScrolling(window.scrollY);
-    // console.log(window.scrollY);
+    console.log(window.scrollY);
   };
 
   return (
     <div
-      className={`flex justify-between items-center w-screen z-30 h-20 text-white fixed px-4 ${
+      className={`flex overflow-visible justify-between items-center w-screen h-20 z-50 text-white fixed px-4 ${
         params.category === undefined
-          ? scrolling <= 670
-            ? "bg-black"
-            : scrolling >= 670 && scrolling <= 1975
-            ? "bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800 duration-500"
-            : scrolling >= 1975 && scrolling <= 2140
-            ? " bg-gradient-to-b from-gray-700  via-sky-900 to-sky-900 duration-500"
-            : scrolling >= 1140 && scrolling <= 2050
-            ? " bg-gradient-to-b from-sky-900 via-sky-800 to-sky-700"
+          ? scrolling <= 464
+            ? "bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900"
+            : scrolling >= 464 && scrolling <= 2550
+            ? "bg-gradient-to-b from-gray-900 via-black to-black duration-500"
+            : scrolling >= 2550 && scrolling <= 3100
+            ? "bg-gradient-to-b from-gray-900 via-gray-800 to-sky-900 duration-500 shadow-2xl	"
+            : scrolling >= 3100
+            ? "bg-gradient-to-b from-sky-900 via-sky-900 to-sky-800 duration-500 shadow-2xl	"
             : "bg-black"
           : scrolling <= 3000
           ? "bg-gradient-to-b from-purple-900 via-purple-800 to-purple-800"
@@ -51,7 +51,7 @@ const Navbar: FC = () => {
           : "bg-gradient-to-b from-fuchsia-800 via-fuchsia-700 to-fuchsia-600 "
       }`}
     >
-      <img className="w-16 ml-2" src={icon} alt="" />
+      <img className="w-16 ml-2 z-50" src={icon} alt="" />
 
       <ul className="hidden sm:flex">
         {links.map((l: linksProps) => (
@@ -69,12 +69,12 @@ const Navbar: FC = () => {
       </ul>
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer mr-4 text-violet-400 z-50 sm:hidden"
+        className="cursor-pointer mr-4 text-violet-400 z-10 sm:hidden"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {nav ? <FaTimes size={30} /> : <FaBars size={30} className="mr-5" />}
       </div>
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen text-gray-500 bg-gradient-to-b from-black to-gray-800 sm:hidden">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen  bg-gradient-to-b from-black to-gray-800 text-gray-500">
           {links.map((l: linksProps) => (
             <li
               key={l.id}

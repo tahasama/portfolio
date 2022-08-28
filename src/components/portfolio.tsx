@@ -27,7 +27,7 @@ const Categories: categoriesProps[] = [
 const Portfolio = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full h-full bg-gradient-to-b from-sky-700 via-sky-600 to-blue-400 ">
+    <div className="w-full h-full bg-gradient-to-b from-black via-sky-900 to-sky-700 ">
       <div className="pt-[100px] sm:pt[0%] sm:pt-[200px]">
         <p className="p-8 text-3xl  indent-7 font-semibold font-serif text-slate-300">
           Portfolio

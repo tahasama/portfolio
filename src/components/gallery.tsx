@@ -112,14 +112,14 @@ const Gallery = () => {
             Welecome to the {params.category} Gallery, here you can browse our
             finest collection,
           </p>
-          <div className="columns-1 md:columns-2 lg:columns-3 h-full">
+          <div className="columns-1 md:columns-2 lg:columns-3 ">
             {params.category !== "Music Videos"
               ? galleries.map((c: galleriesProps) => (
                   <div key={c.id} className="cursor-pointer ">
                     <a href={c.image}>
-                      <div className="mb-4 z-20 ">
+                      <div className="py-8 z-20 ">
                         <img
-                          className="w-full h-full hover:scale-105 duration-500"
+                          className="w-full h-full my-[-5px] hover:scale-105  duration-500"
                           src={c.image}
                           alt="wow"
                         />
