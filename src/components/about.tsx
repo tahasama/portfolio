@@ -1,7 +1,7 @@
 import Camera from "../images/camera.jpg";
 import Camera2 from "../images/camera2.jpg";
 import Drone from "../images/drone.jpg";
-import { Background, Parallax } from "react-parallax";
+import { Parallax } from "react-parallax";
 
 const About = () => {
   return (
