@@ -33,7 +33,7 @@ const Navbar: FC = () => {
 
   return (
     <div
-      className={`flex  justify-between items-center w-screen h-20 z-50 text-white fixed px-4 ${
+      className={`flex overflow-visible justify-between items-center w-screen h-20 z-50 text-white fixed px-4 ${
         params.category === undefined
           ? scrolling <= 464
             ? "bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900"
@@ -53,11 +53,11 @@ const Navbar: FC = () => {
     >
       <img className="w-16 ml-2 z-50" src={icon} alt="" />
 
-      <ul className="hidden sm:flex">
+      <ul className="hidden overflow-hidden sm:flex">
         {links.map((l: linksProps) => (
           <li
             key={l.id}
-            className={`capitalize  font-medium px-4 cursor-pointer text-md hover:scale-105 duration-100 ${
+            className={`capitalize  font-medium px-4 cursor-pointer text-lg hover:scale-105 duration-100 ${
               params.category === undefined && scrolling <= 470
                 ? "text-gray-500"
                 : "text-gray-300"
