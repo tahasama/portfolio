@@ -29,7 +29,7 @@ const Navbar: FC = () => {
 
   const scrolled = () => {
     setScrolling(window.scrollY);
-    // console.log(window.scrollY);
+    console.log(window.scrollY);
   };
 
   return (
@@ -40,9 +40,9 @@ const Navbar: FC = () => {
             ? "bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900"
             : scrolling >= 464 && scrolling <= 2437
             ? "bg-gradient-to-b from-gray-900 via-black to-black duration-1000"
-            : scrolling >= 2437 && scrolling <= 2700
+            : scrolling >= 2437 && scrolling <= 2710
             ? "bg-gradient-to-b from- via-black to-sky-900 duration-1000 "
-            : scrolling >= 2700 && scrolling <= 3960
+            : scrolling >= 2710 && scrolling <= 3960
             ? "bg-gradient-to-b from-sky-900 via-sky-900 to-sky-800 duration-1000 "
             : scrolling >= 3960 && scrolling <= 4200
             ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky- duration-1000 "
