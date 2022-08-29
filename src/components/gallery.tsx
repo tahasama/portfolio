@@ -7,16 +7,11 @@ import Industrial from "../images/industrial.jpg";
 import Fashion from "../images/fashion.jpg";
 import Architectural from "../images/architectural.jpg";
 import Navbar from "./navbar";
-import { Element } from "react-scroll";
 
 interface galleriesProps {
   id: number;
   gallery: string;
   image: string;
-}
-interface videosProps {
-  id: number;
-  video: string;
 }
 
 const galleries: galleriesProps[] = [
@@ -56,38 +51,6 @@ const galleries: galleriesProps[] = [
   { id: 23, gallery: "Fashion", image: Fashion },
   { id: 22, gallery: "Industrial", image: Industrial },
   { id: 24, gallery: "Portrait", image: Portrait },
-];
-
-const videos: videosProps[] = [
-  { id: 1, video: "https://www.youtube.com/watch?v=Nh6DuYynq7c" },
-  {
-    id: 2,
-    video: "https://www.youtube.com/watch?v=H5v3kku4y6Q",
-  },
-  {
-    id: 3,
-    video: "https://www.youtube.com/watch?v=TdrL3QxjyVw",
-  },
-  {
-    id: 4,
-    video: "https://www.youtube.com/watch?v=hn3wJ1_1Zsg",
-  },
-  {
-    id: 5,
-    video: "https://www.youtube.com/watch?v=RBumgq5yVrA",
-  },
-  {
-    id: 6,
-    video: "https://www.youtube.com/watch?v=0yW7w8F2TVA",
-  },
-  {
-    id: 7,
-    video: "https://www.youtube.com/watch?v=MwpMEbgC7DA",
-  },
-  {
-    id: 8,
-    video: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
-  },
 ];
 
 // const Images: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];

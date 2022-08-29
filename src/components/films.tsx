@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import clip from "../images/video.mp4";
 import Eminem from "../images/eminem.mp4";
@@ -36,11 +35,6 @@ const videos: videosProps[] = [
     light: adele,
   },
 
-  //   {
-  //     id: 1,
-  //     video: "https://www.youtube.com/watch?v=Nh6DuYynq7c",
-  //     title: "Eminem",
-  //   },
   {
     id: 4,
     video: "https://www.youtube.com/watch?v=H5v3kku4y6Q",
@@ -60,25 +54,6 @@ const videos: videosProps[] = [
     title: "music 2",
     light: "",
   },
-  //   {
-  //     id: 5,
-  //     video: "https://www.youtube.com/watch?v=RBumgq5yVrA",
-  //     title: "music 3",
-  //   },
-  //   {
-  //     id: 6,
-  //     video: "https://www.youtube.com/watch?v=0yW7w8F2TVA",
-  //     title: "music 4",
-  //   },
-
-  //   {
-  //     id: 7,
-  //     video: "https://www.youtube.com/watch?v=MwpMEbgC7DA",
-  //   },
-  //   {
-  //     id: 8,
-  //     video: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
-  //   },
 ];
 
 const Films = () => {
