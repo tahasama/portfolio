@@ -4,9 +4,9 @@ import Portrait from "../images/portrait.jpg";
 import Industrial from "../images/industrial.jpg";
 import Fashion from "../images/fashion.jpg";
 import Architectural from "../images/architectural.jpg";
-import Music from "../images/music.jpg";
 import { useNavigate } from "react-router-dom";
 import { ImArrowRight } from "react-icons/im";
+import { Element } from "react-scroll";
 
 interface categoriesProps {
   id: number;
@@ -18,7 +18,7 @@ const Categories: categoriesProps[] = [
   { id: 1, category: "Weddings", image: Weddings },
   { id: 2, category: "Events", image: Events },
   { id: 6, category: "Industrial", image: Industrial },
-  { id: 7, category: "Music Videos", image: Music },
+  // { id: 7, category: "Music Videos", image: Music },
   { id: 4, category: "Fashion", image: Fashion },
   { id: 3, category: "Portrait", image: Portrait },
   { id: 5, category: "Architectural", image: Architectural },
@@ -28,11 +28,12 @@ const Portfolio = () => {
   const navigate = useNavigate();
   return (
     <div className="w-full h-full bg-gradient-to-b from-black via-sky-900 to-sky-700 ">
+      <Element name="gallery"></Element>
       <div className="pt-[100px] sm:pt[0%] sm:pt-[200px]">
         <p className="p-8 text-3xl  indent-7 font-semibold font-serif text-slate-300">
           Portfolio
         </p>
-
+        <br />
         <div className="columns-2 md:columns-3 lg:columns-3 mx-3 ">
           {Categories.map((c: categoriesProps) => (
             <div

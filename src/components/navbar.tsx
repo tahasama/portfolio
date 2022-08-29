@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Params, useParams } from "react-router-dom";
 import icon from "../images/favicon.png";
+import { Link } from "react-scroll";
 
 interface linksProps {
   id: number;
@@ -11,9 +12,9 @@ interface linksProps {
 const links: linksProps[] = [
   { id: 1, link: "home" },
   { id: 2, link: "about" },
-  { id: 3, link: "portfolio" },
-  { id: 4, link: "experience" },
-  { id: 5, link: "conctact" },
+  { id: 3, link: "gallery" },
+  { id: 4, link: "video clips" },
+  { id: 5, link: "contact" },
 ];
 
 const Navbar: FC = () => {
@@ -37,12 +38,20 @@ const Navbar: FC = () => {
         params.category === undefined
           ? scrolling <= 464
             ? "bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900"
-            : scrolling >= 464 && scrolling <= 2550
-            ? "bg-gradient-to-b from-gray-900 via-black to-black duration-500"
-            : scrolling >= 2550 && scrolling <= 3100
-            ? "bg-gradient-to-b from-gray-900 via-gray-800 to-sky-900 duration-500 shadow-2xl	"
-            : scrolling >= 3100
-            ? "bg-gradient-to-b from-sky-900 via-sky-900 to-sky-800 duration-500 shadow-2xl	"
+            : scrolling >= 464 && scrolling <= 2437
+            ? "bg-gradient-to-b from-gray-900 via-black to-black duration-1000"
+            : scrolling >= 2437 && scrolling <= 2680
+            ? "bg-gradient-to-b from- via-black to-sky-900 duration-1000 "
+            : scrolling >= 2437 && scrolling <= 2680
+            ? "bg-gradient-to-b from- via-sky-900 to-sky-900 duration-1000 "
+            : scrolling >= 2680 && scrolling <= 3960
+            ? "bg-gradient-to-b from-sky-900 via-sky-900 to-sky-800 duration-1000 "
+            : scrolling >= 3960 && scrolling <= 4200
+            ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky- duration-1000 "
+            : scrolling >= 4200 && scrolling <= 4940
+            ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky-700 duration-1000 "
+            : scrolling >= 4940
+            ? "bg-gradient-to-b from-sky-700 via-sky-600 to-sky- duration-1000 shadow-lg shadow-sky-600"
             : "bg-black"
           : scrolling <= 3000
           ? "bg-gradient-to-b from-purple-900 via-purple-800 to-purple-800"
@@ -60,10 +69,12 @@ const Navbar: FC = () => {
             className={`capitalize  font-medium px-4 cursor-pointer text-lg hover:scale-105 duration-100 ${
               params.category === undefined && scrolling <= 470
                 ? "text-gray-500"
-                : "text-gray-300"
+                : scrolling >= 470 && scrolling <= 4900
+                ? "text-gray-300"
+                : "text-white"
             }`}
           >
-            {l.link}
+            <Link to={l.link}>{l.link}</Link>
           </li>
         ))}
       </ul>
@@ -78,9 +89,11 @@ const Navbar: FC = () => {
           {links.map((l: linksProps) => (
             <li
               key={l.id}
-              className="px-4 py-4 capitalize cursor-pointer text-4xl"
+              className="px-4 py-4 capitalize cursor-pointer text-3xl text-violet-200 hover:scale-105 duration-200 "
             >
-              {l.link}
+              <div className="h-12 w-44 border-b-2 border-r-2 border-rose-300 rounded-r-md">
+                {l.link}
+              </div>
             </li>
           ))}
         </ul>

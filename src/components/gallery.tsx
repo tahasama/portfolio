@@ -6,8 +6,8 @@ import Portrait from "../images/portrait.jpg";
 import Industrial from "../images/industrial.jpg";
 import Fashion from "../images/fashion.jpg";
 import Architectural from "../images/architectural.jpg";
-import ReactPlayer from "react-player/youtube";
 import Navbar from "./navbar";
+import { Element } from "react-scroll";
 
 interface galleriesProps {
   id: number;
@@ -94,8 +94,6 @@ const videos: videosProps[] = [
 
 const Gallery = () => {
   const params = useParams();
-  console.log(params.category);
-  console.log("hhhhhhhhhy");
 
   return (
     <>
@@ -113,31 +111,19 @@ const Gallery = () => {
             finest collection,
           </p>
           <div className="columns-1 md:columns-2 lg:columns-3 ">
-            {params.category !== "Music Videos"
-              ? galleries.map((c: galleriesProps) => (
-                  <div key={c.id} className="cursor-pointer ">
-                    <a href={c.image}>
-                      <div className="py-8 z-20 ">
-                        <img
-                          className="w-full h-full my-[-5px] hover:scale-105  duration-500"
-                          src={c.image}
-                          alt="wow"
-                        />
-                      </div>
-                    </a>
-                  </div>
-                ))
-              : videos.map((v: videosProps) => (
-                  <div className="relative w-full p-0 pr-[30px] mr-[160px] mb-5 ">
-                    <ReactPlayer
-                      url={v.video}
-                      // width="100%"
-                      width="100%"
-                      controls
-                      muted
+            {galleries.map((c: galleriesProps) => (
+              <div key={c.id} className="cursor-pointer ">
+                <a href={c.image}>
+                  <div className="py-8 z-20 ">
+                    <img
+                      className="w-full h-full my-[-5px] hover:scale-105  duration-500"
+                      src={c.image}
+                      alt="wow"
                     />
                   </div>
-                ))}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
