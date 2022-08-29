@@ -1,4 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import icon from "../images/favicon.png";
+import { Element, Link } from "react-scroll";
 
 import Weddings from "../images/wedding.jpeg";
 import Events from "../images/event.jpg";
@@ -6,7 +8,9 @@ import Portrait from "../images/portrait.jpg";
 import Industrial from "../images/industrial.jpg";
 import Fashion from "../images/fashion.jpg";
 import Architectural from "../images/architectural.jpg";
-import Navbar from "./navbar";
+import { HiArrowNarrowLeft } from "react-icons/hi";
+import { HiArrowNarrowUp } from "react-icons/hi";
+import { useEffect, useState } from "react";
 
 interface galleriesProps {
   id: number;
@@ -57,10 +61,37 @@ const galleries: galleriesProps[] = [
 
 const Gallery = () => {
   const params = useParams();
+  const navigate = useNavigate();
+  const [scrolling, setScrolling] = useState<number>(0);
+
+  useEffect(() => {
+    scrolled();
+    window.addEventListener("scroll", scrolled);
+  }, []);
+
+  const scrolled = () => {
+    setScrolling(window.scrollY);
+    // console.log(window.scrollY);
+  };
 
   return (
     <>
-      <Navbar />
+      <Element name="up"></Element>
+      <div className=" flex overflow-visible justify-between items-center w-screen h-20 z-50 text-white fixed px-4">
+        <img className="w-16 ml-2 z-50" src={icon} alt="" />
+
+        <div className=" flex flex-row justify-center items-center mx-8 text-lg p-3 font-semibold bg-blue-500 border-2 border-blue-500 rounded cursor-pointer hover:bg-blue-800">
+          <HiArrowNarrowLeft size={24} />
+          <p onClick={() => navigate("/")}>&nbsp; Go back</p>
+        </div>
+        {scrolling > 1 && (
+          <div className="fixed right-0 bottom-5 flex flex-row justify-center items-center mx-8 text-lg p-4 bg-pink-500 font-semibold rounded cursor-pointer hover:bg-blue-800">
+            <HiArrowNarrowUp size={24} />
+            <Link to="up">&nbsp; Go Up</Link>
+          </div>
+        )}
+      </div>
+
       <div
         className={`absolute bg-gradient-to-b from-purple-800 via-fuchsia-700 to-pink-300`}
       >
