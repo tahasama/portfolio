@@ -36,7 +36,7 @@ const Contact: FC = () => {
           <textarea
             name="message"
             placeholder="Enter your message"
-            rows={8}
+            rows={6}
             className="placeholder-slate-200 p-2 bg-transparent border-2 font-serif border-teal-300 rounded-md "
           ></textarea>
 
