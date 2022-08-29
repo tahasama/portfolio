@@ -5,7 +5,7 @@ const Contact: FC = () => {
   return (
     <div className="z-0 w-full h-full bg-gradient-to-b from-sky-600 via-sky-600 to-blue-300">
       <Element name="contact"></Element>
-      <div className="flex flex-col justify-center pl-16  mt-8">
+      <div className="flex flex-col justify-center pl-16  mt-12">
         {/* <div style={{ backgroundImage: `url(${Events})` }} > */}
         <p className="mt-5  text-3xl font-semibold font-serif text-slate-600">
           Contact

@@ -29,7 +29,7 @@ const Navbar: FC = () => {
 
   const scrolled = () => {
     setScrolling(window.scrollY);
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
   };
 
   return (
