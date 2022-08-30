@@ -1,4 +1,4 @@
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import photo from "../images/photo.jpg";
 
 import { HiArrowNarrowRight } from "react-icons/hi";
@@ -18,12 +18,14 @@ const Home = () => {
             for many year to come.
           </h2>
           <div className="">
-            <button className=" group font-semibold text-xl rounded-md px-4 py-2 my-7 flex items-center border-gradient bg-gradient-to-r from-cyan-500 to-blue-500 ">
-              Portfolio
-              <span className="group-hover:rotate-90 duration-500 m-2">
-                <HiArrowNarrowRight size={22} />
-              </span>
-            </button>
+            <Link to="gallery">
+              <button className=" group font-semibold text-xl rounded-md px-4 py-2 my-7 flex items-center border-gradient bg-gradient-to-r from-cyan-500 to-blue-500 ">
+                Portfolio
+                <span className="group-hover:rotate-90 duration-500 m-2">
+                  <HiArrowNarrowRight size={22} />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>{" "}

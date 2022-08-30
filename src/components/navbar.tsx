@@ -90,7 +90,9 @@ const Navbar: FC = () => {
               className="px-4 py-4 capitalize cursor-pointer text-3xl text-violet-200 hover:scale-105 duration-200 "
             >
               <div className="h-12 w-44 border-b-2 border-r-2 border-rose-300 rounded-r-md">
-                {l.link}
+                <Link to={l.link} onClick={() => setNav(!nav)}>
+                  {l.link}
+                </Link>
               </div>
             </li>
           ))}
