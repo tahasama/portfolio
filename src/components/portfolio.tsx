@@ -38,7 +38,7 @@ const Portfolio = () => {
           {Categories.map((c: categoriesProps) => (
             <div
               key={c.id}
-              className=" cursor-pointer group mb-5 origin-top hover:scale-95 duration-1000 "
+              className=" cursor-pointer group mb-5 origin-top hover:scale-105 duration-1000 "
             >
               <div className="z-10" onClick={() => navigate(`/${c.category}`)}>
                 <img className=" w-full h-full" src={c.image} alt="wow" />

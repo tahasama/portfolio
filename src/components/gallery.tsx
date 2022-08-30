@@ -80,15 +80,17 @@ const Gallery = () => {
       <div className=" flex overflow-visible justify-between items-center w-screen h-20 z-50 text-white fixed px-4">
         <img className="w-16 ml-2 z-50" src={icon} alt="" />
 
-        <div className=" flex flex-row justify-center items-center mx-8 text-lg p-3 font-semibold bg-blue-500 border-2 border-blue-500 rounded cursor-pointer hover:bg-blue-800">
+        <div className="fixed right-0 top-5 flex flex-row justify-center items-center mx-8 text-lg p-3 font-semibold bg-blue-500 border-2 border-blue-500 rounded cursor-pointer hover:bg-blue-800 duration-300">
           <HiArrowNarrowLeft size={24} />
           <p onClick={() => navigate("/")}>&nbsp; Go back</p>
         </div>
         {scrolling > 1 && (
-          <div className="fixed right-0 bottom-5 flex flex-row justify-center items-center mx-8 text-lg p-4 bg-pink-500 font-semibold rounded cursor-pointer hover:bg-blue-800">
-            <HiArrowNarrowUp size={24} />
-            <Link to="up">&nbsp; Go Up</Link>
-          </div>
+          <Link to="up">
+            <div className="fixed right-0 bottom-5 flex flex-row justify-center items-center mx-8 text-lg p-4 bg-pink-500 font-semibold rounded cursor-pointer hover:bg-blue-800 duration-300">
+              <HiArrowNarrowUp size={24} />
+              &nbsp; Go Up &nbsp;
+            </div>
+          </Link>
         )}
       </div>
 

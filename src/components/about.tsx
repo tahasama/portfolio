@@ -11,7 +11,7 @@ const About = () => {
 
       <div className="flex flex-col justify-center pl-16 ">
         {/* <div style={{ backgroundImage: `url(${Events})` }} > */}
-        <p className="my-7 text-3xl font-semibold font-serif text-slate-300">
+        <p className="mt-[100px] text-3xl font-semibold font-serif text-slate-300">
           About
         </p>
         <div className=" text-2xl indent-7  h-full ">
