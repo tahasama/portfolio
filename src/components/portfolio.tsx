@@ -5,11 +5,8 @@ import Industrial from "../images/industrial.jpg";
 import Fashion from "../images/fashion.jpg";
 import Architectural from "../images/architectural.jpg";
 import { useNavigate } from "react-router-dom";
-import { ImArrowRight, ImArrowDown } from "react-icons/im";
-import { Element, Link } from "react-scroll";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { relative } from "path";
+import { ImArrowRight } from "react-icons/im";
+import { Element } from "react-scroll";
 
 interface categoriesProps {
   id: number;
@@ -29,115 +26,15 @@ const Categories: categoriesProps[] = [
 
 const Portfolio = () => {
   const navigate = useNavigate();
-  const [scrolling, setScrolling] = useState<number>(0);
-
-  const motionComponent = (
-    <motion.p
-      animate={{
-        y: [
-          -5,
-          5,
-          -5,
-          5,
-          -5,
-          5,
-          -5,
-          5,
-          -5,
-          5,
-          -5,
-          5 - 5,
-          5,
-          -5,
-          5,
-          -5,
-          5,
-          -5,
-          5,
-        ],
-      }}
-      transition={{
-        ease: "easeInOut",
-        duration: 20,
-        delay: 0.3,
-        repeat: Infinity,
-      }}
-    >
-      {" "}
-      <ImArrowDown />
-    </motion.p>
-  );
-
-  useEffect(() => {
-    scrolled();
-    window.addEventListener("scroll", scrolled);
-  }, []);
-
-  const scrolled = () => {
-    setScrolling(window.scrollY);
-    console.log(window.scrollY);
-  };
   return (
     <div className="w-full h-full bg-gradient-to-b from-black via-sky-900 to-sky-700 ">
       <Element name="gallery"></Element>
-      <div className="invisible sm:visible">
-        {scrolling >= 3260 && scrolling <= 4245 && (
-          <div className="flex mt-10 h-72 justify-center items-center">
-            <motion.div
-              className="bg-gradient-to-br from-cyan-400 to-emerald-400"
-              style={{
-                width: 140,
-                height: 140,
-                borderRadius: 30,
-              }}
-              animate={{ rotate: 360, scale: 1.5, x: [0, 500, -500] }}
-              transition={{ ease: "anticipate", duration: 2, delay: 0.3 }}
-            ></motion.div>
-            <Link to="home">
-              <motion.div
-                className="absolute left-96 text-xl font-serif text-white"
-                animate={{ scale: 1.5, x: [500, -100] }}
-              >
-                We encapture the best moment ...
-              </motion.div>
-            </Link>
-          </div>
-        )}{" "}
-        {scrolling >= 3400 && (
-          <Link to="portfolio">
-            <div className="p-8 text-3xl flex justify-center indent-7 font-semibold font-serif text-slate-300 cursor-pointer">
-              {motionComponent}
-              Check out our Diverse Portfolio &nbsp;
-              {motionComponent}
-            </div>
-          </Link>
-        )}
-        {scrolling >= 3600 && (
-          <div className="flex h-72 justify-center items-center">
-            <motion.div
-              className="bg-gradient-to-tr from-emerald-400 to-cyan-400"
-              style={{
-                width: 140,
-                height: 140,
-                borderRadius: 30,
-                backgroundColor: "#fff",
-              }}
-              animate={{ rotate: 90, scale: 1.5, x: [0, -500, 500] }}
-              transition={{ ease: "anticipate", duration: 2, delay: 0.3 }}
-            ></motion.div>{" "}
-            <motion.div
-              className="absolute left-36 text-xl font-serif text-white"
-              animate={{ scale: 1.5, x: [-500, 600] }}
-            >
-              and frame them to the fullest form or artistery...
-            </motion.div>
-          </div>
-        )}
-      </div>
       <div className="pt-[100px] sm:pt[0%] sm:pt-[200px]">
+        <p className="p-8 text-3xl  indent-7 font-semibold font-serif text-slate-300">
+          Portfolio
+        </p>
         <br />
         <div className="columns-2 md:columns-3 lg:columns-3 mx-3 ">
-          <Element name="portfolio"></Element>
           {Categories.map((c: categoriesProps) => (
             <div
               onClick={() => navigate(`/${c.category}`)}
