@@ -86,7 +86,7 @@ const Gallery = () => {
         </div>
         {scrolling > 1 && (
           <Link to="up">
-            <div className="fixed right-0 bottom-5 flex flex-row justify-center items-center mx-8 text-lg p-4 bg-pink-500 font-semibold rounded cursor-pointer hover:bg-blue-800 duration-300">
+            <div className="fixed right-0 bottom-5 h-24 rounded-full opacity-60 flex flex-col justify-center items-center mx-8 text-lg p-3 bg-pink-700 font-semibold  cursor-pointer hover:bg-blue-700 hover:opacity-100 duration-300">
               <HiArrowNarrowUp size={24} />
               &nbsp; Go Up &nbsp;
             </div>

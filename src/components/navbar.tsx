@@ -40,17 +40,17 @@ const Navbar: FC = () => {
             ? "bg-gradient-to-b from-gray-800 via-gray-900 to-gray-900"
             : scrolling >= 464 && scrolling <= 2368
             ? "bg-gradient-to-b from-gray-900 via-black to-black duration-1000"
-            : scrolling >= 2368 && scrolling <= 2690
+            : scrolling >= 2368 && scrolling <= 4370
             ? "bg-gradient-to-b from- via-black to-sky-900 duration-1000 "
-            : scrolling >= 2690 && scrolling <= 3783
+            : scrolling >= 4370 && scrolling <= 6100
             ? "bg-gradient-to-b from-sky-900 via-sky-900 to-sky-800 duration-1000 "
-            : scrolling >= 3783 && scrolling <= 4200
+            : scrolling >= 6100 && scrolling <= 6900
             ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky- duration-1000 "
-            : scrolling >= 4200 && scrolling <= 4785
-            ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky-700 duration-1000 "
-            : scrolling >= 4785
-            ? "bg-gradient-to-b from-sky-700 via-sky-600 to-sky-600 duration-1000 "
-            : "bg-black"
+            : // : scrolling >= 4200 && scrolling <= 4785
+              // ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky-700 duration-1000 "
+              // : scrolling >= 4785
+              // ? "bg-gradient-to-b from-sky-700 via-sky-600 to-sky-600 duration-1000 "
+              "bg-gradient-to-b from-sky-800 via-sky-700 to-sky-600 duration-1000 "
           : scrolling <= 3000
           ? "bg-gradient-to-b from-purple-900 via-purple-800 to-purple-800"
           : scrolling >= 3000 && scrolling <= 4800

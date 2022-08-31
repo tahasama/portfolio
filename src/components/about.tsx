@@ -19,7 +19,7 @@ const About = () => {
             {/* <Background>
               <img src={Camera} alt="camera" className="w-[10000px] p-32" />
             </Background> */}
-            <div className=" h-[520px]  w-screen text-white">
+            <div className=" h-[1000px]  w-screen text-white">
               <p className="absolute top-[40%] right-[20%] text-[21px] sm:text-2xl">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur, voluptas assumenda laboriosam, aperiam aliquid
@@ -33,7 +33,7 @@ const About = () => {
             {/* <Background>
               <img src={Camera} alt="camera" className="w-[10000px] p-32" />
             </Background> */}
-            <div className=" h-[600px] w-screen text-white">
+            <div className=" h-[1000px] w-screen text-white">
               <p className="absolute top-[40%] left-[20%] text-[21px] sm:text-2xl">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur, voluptas assumenda laboriosam, aperiam aliquid
@@ -47,7 +47,7 @@ const About = () => {
             {/* <Background>
               <img src={Camera} alt="camera" className="w-[10000px] p-32" />
             </Background> */}
-            <div className=" h-[500px] w-screen text-white">
+            <div className=" h-[1000px] w-screen text-white">
               <p className="absolute top-[40%] right-[20%] text-[21px] sm:text-2xl ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur, voluptas assumenda laboriosam, aperiam aliquid
