@@ -42,9 +42,9 @@ const Navbar: FC = () => {
             ? "bg-gradient-to-b from-gray-900 via-black to-black duration-1000"
             : scrolling >= 2368 && scrolling <= 4130
             ? "bg-gradient-to-b from- via-black to-sky-900 duration-1000 "
-            : scrolling >= 4130 && scrolling <= 5400
+            : scrolling >= 4130 && scrolling <= 5645
             ? "bg-gradient-to-b from-sky-900 via-sky-900 to-sky-800 duration-1000 "
-            : scrolling >= 5400 && scrolling <= 6300
+            : scrolling >= 5645 && scrolling <= 6300
             ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky- duration-1000 "
             : // : scrolling >= 4200 && scrolling <= 4785
               // ? "bg-gradient-to-b from-sky-800 via-sky-700 to-sky-700 duration-1000 "

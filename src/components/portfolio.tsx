@@ -34,7 +34,7 @@ const Portfolio = () => {
           Portfolio
         </p>
         <br />
-        <div className="columns-2 md:columns-3 lg:columns-3 mx-3 ">
+        <div className="h-[1550px] columns-2 md:columns-3 lg:columns-3 mx-3 ">
           {Categories.map((c: categoriesProps) => (
             <div
               onClick={() => navigate(`/${c.category}`)}
